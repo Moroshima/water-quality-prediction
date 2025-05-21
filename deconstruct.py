@@ -6,4 +6,4 @@ x = np.load("moving_mnist.npy")
 print(x.shape)
 
 np.set_printoptions(threshold=np.inf)
-print(x[0])
+print(x[0][0])

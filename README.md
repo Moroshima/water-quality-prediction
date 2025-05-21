@@ -2,6 +2,8 @@
 
 水质监测浮标
 
+generate.py -> convert.py -> main.py
+
 ## 代码运行环境 Requirements
 
 - Python 3.12.10
