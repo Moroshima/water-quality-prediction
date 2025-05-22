@@ -6,46 +6,72 @@ generate.py -> convert.py -> main.py
 
 ## 代码运行环境 Requirements
 
+### Windows
+
 - Python 3.12.10
 - Nvidia GPU driver 576.40
 
-Create Python virtual environment.
+#### Create Python Virtual Environment
 
-```powershell
+```pwsh
 python -m venv convlstm
 ```
 
-Activate the virtual environment.
+#### Activate the Virtual Environment
 
-```powershell
-.\convlstm\Scripts\Activate.ps1
+```pwsh
+convlstm\Scripts\Activate.ps1
 ```
 
-Install PyTorch.
+#### Install Dependencies
 
-```powershell
+```pwsh
+pip install pillow numpy matplotlib keras
+```
+
+```pwsh
 pip install torch --index-url https://download.pytorch.org/whl/cu128
 ```
 
-Install dependencies.
+or uncomment the following line in `requirements.txt`:
 
-```powershell
-pip install keras matplotlib imageio ipython ipywidgets
+```txt
+--index-url https://download.pytorch.org/whl/cu128 torch==2.7.0+cu128
 ```
 
-Change the backend of Keras to PyTorch.
+and then run
 
-```powershell
-code C:\Users\Moroshima\.keras\keras.json
+```pwsh
+pip install -r requirements.txt
 ```
 
-```json
-{
-  "floatx": "float32",
-  "epsilon": 1e-7,
-  "backend": "torch",
-  "image_data_format": "channels_last"
-}
+### macOS
+
+- Python 3.12.10
+- Metal Performance Shaders (MPS) support
+
+#### Create Python Virtual Environment
+
+```zsh
+python3.12 -m venv convlstm
+```
+
+#### Activate the Virtual Environment
+
+```zsh
+source convlstm/bin/activate
+```
+
+#### Install Dependencies
+
+```zsh
+pip install pillow numpy matplotlib keras torch
+```
+
+or
+
+```zsh
+pip install -r requirements.txt
 ```
 
 ## 模型评估 Model Evaluation
@@ -57,7 +83,7 @@ code C:\Users\Moroshima\.keras\keras.json
 
 [On Powershell 7.5 preview 4, after `conda activate base`, `Env:_CE_CONDA` and `Env:_CE_M` appears again. · Issue #14292 · conda/conda](https://github.com/conda/conda/issues/14292)
 
-## 参考文献 References
+## 参考 References
 
 [Convlstm 时空预测（keras 框架、实战）\_convlstm3d 多步输出-CSDN 博客](https://blog.csdn.net/popofzk/article/details/106155925)
 
