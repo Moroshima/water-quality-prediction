@@ -4,10 +4,10 @@ import random
 
 # 参数设置
 width, height = 64, 64  # 画布尺寸
-square_size = 8  # 正方形边长
 speed = 4  # 移动速度
 
 for group in range(1000):
+    square_size = 8 * random.randint(1, 3)  # 正方形边长
 
     # 随机初始位置
     x = random.randint(0, width - square_size)
@@ -23,8 +23,8 @@ for group in range(1000):
     # 生成20张图像
     for frame in range(20):
         # 更新位置
-        x += vx
-        y += vy
+        x += vx * random.uniform(0.8, 1.2)
+        y += vy * random.uniform(0.8, 1.2)
 
         # 边界碰撞检测及反弹
         if x < 0:  # 左边缘
