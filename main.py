@@ -200,18 +200,18 @@ match mode:
         # Plot the original frames.
         for idx, ax in enumerate(axes[0]):
             ax.imshow(np.squeeze(example[idx]), cmap="gray")
-            ax.set_title(f"Frame {idx + 1}")
+            ax.set_title(f"Input {idx + 1}")
             ax.axis("off")
         for idx, ax in enumerate(axes[1]):
             ax.imshow(np.squeeze(example[idx + 10]), cmap="gray")
-            ax.set_title(f"Frame {idx + 11}")
+            ax.set_title(f"GT {idx + 11}")
             ax.axis("off")
 
         # Plot the new frames.
         new_frames = frames[10:, ...]
         for idx, ax in enumerate(axes[2]):
             ax.imshow(np.squeeze(new_frames[idx]), cmap="gray")
-            ax.set_title(f"Predict {idx + 11}")
+            ax.set_title(f"Prediction {idx + 11}")
             ax.axis("off")
 
         # Display the figure.
