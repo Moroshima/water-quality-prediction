@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import os
+
 os.environ["KERAS_BACKEND"] = "torch"
 import keras
 from keras import layers
@@ -66,6 +67,8 @@ plt.show()
 
 # train = True
 train = False
+mps = True
+# mps = False
 
 if train:
     # Construct the input layer with no definite frame size.
@@ -130,10 +133,18 @@ if train:
 
     # Save the model to disk.
     model.save(
-        "water_quality_prediction.keras"
+        (
+            "water_quality_prediction.keras"
+            if not mps
+            else "water_quality_prediction_mps.keras"
+        ),
     )  # The file needs to end with the .keras extension
 else:
-    model = keras.models.load_model("water_quality_prediction.keras")
+    model = keras.models.load_model(
+        "water_quality_prediction.keras"
+        if not mps
+        else "water_quality_prediction_mps.keras"
+    )
 
     # Select a random example from the validation dataset.
     example = val_dataset[np.random.choice(range(len(val_dataset)), size=1)[0]]
