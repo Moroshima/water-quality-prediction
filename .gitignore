@@ -1,8 +1,6 @@
 .DS_Store
 convlstm
 generate/*.png
-water_quality.npz
-model_training_history.npy
-model_training_history_mps.npy
-water_quality_prediction.keras
-water_quality_prediction_mps.keras
+*.npz
+*.npy
+*.keras
