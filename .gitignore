@@ -1,6 +1,9 @@
 .DS_Store
 convlstm
-generate/*.png
+__pycache__
+mock/generate/*.png
+preprocess/graphs/*.png
+preprocess/kriging/*.png
 *.npz
 *.npy
 *.keras
