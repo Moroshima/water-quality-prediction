@@ -9,7 +9,7 @@ for frame_idx in range(20):
     # 遍历每个组
     for group_idx in range(1000):
         # 生成文件名（根据实际路径可能需要添加目录前缀）
-        filename = f"generate/group_{group_idx:04d}_frame_{frame_idx:02d}.png"
+        filename = f"mock/generate/group_{group_idx:04d}_frame_{frame_idx:02d}.png"
 
         # 读取图像文件
         img = Image.open(filename)
@@ -32,5 +32,5 @@ for frame_idx in range(20):
         tensor[frame_idx, group_idx] = block_kron
 
 print("shape:", tensor.shape)
-np.savez_compressed("water_quality.npz", tensor)
+np.savez_compressed("water_quality_mock.npz", tensor)
 print("finished.")

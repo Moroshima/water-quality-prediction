@@ -26,7 +26,7 @@ convlstm\Scripts\Activate.ps1
 #### Install Dependencies
 
 ```pwsh
-pip install pillow numpy matplotlib keras
+pip install pillow numpy matplotlib keras scipy pandas
 ```
 
 ```pwsh
@@ -73,6 +73,14 @@ or
 ```zsh
 pip install -r requirements.txt
 ```
+
+#### Rebuild matplotlib Fonts Cache
+
+```zsh
+rm -r ~/.matplotlib
+```
+
+然后重新执行引用了 matplotlib 的代码即可刷新字体缓存。
 
 ## 模型评估 Model Evaluation
 

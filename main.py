@@ -70,7 +70,7 @@ plt.show()
 
 mode: Literal["train", "evaluate", "predict"] = "train"
 # mps = True
-mps = True if torch.backends.mps.is_available() else False
+mps = False
 
 match mode:
     case "train":
@@ -168,7 +168,7 @@ match mode:
         y_pred = y_pred_raw.reshape(y_pred_raw.shape[0], -1)
         metric = keras.metrics.R2Score()
         metric.update_state(y_true, y_pred)
-        val_r2 = metric.result()  #
+        val_r2 = metric.result()
         print(f"Validation Loss: {val_loss}, RSME: {val_rsme}, R2 Score: {val_r2}")
     case "predict":
         model = keras.models.load_model(

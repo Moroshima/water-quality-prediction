@@ -77,7 +77,6 @@ np.save("feature_min_max.npy", (feature_min, feature_max))
 #             f"preprocess/kriging/{index}_{pd.to_datetime(str(specific_date)).strftime("%Y%m%d_%H%M%S")}.png"
 #         )
 
-# 在现有代码的基础上添加以下部分
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 

@@ -47,6 +47,6 @@ for group in range(1000):
         draw.rectangle(
             [x, y, x + square_size, y + square_size], fill="white", outline="yellow"
         )
-        img.save(f"generate/group_{group:04d}_frame_{frame:02d}.png")
+        img.save(f"mock/generate/group_{group:04d}_frame_{frame:02d}.png")
 
 print("finished.")
