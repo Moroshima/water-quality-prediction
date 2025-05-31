@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+
 # from scipy.interpolate import lagrange  # LAGRANGE
 from scipy.interpolate import BSpline
 import pandas as pd
@@ -96,5 +97,8 @@ for i in range(5):
 
 # print(output_df.sort_values(by=["采样日期", "点位名称"]))
 output_df.to_csv(
-    "preprocess/data/water_quality_data_interpolated.csv", date_format="%Y/%m/%d %H:%M:%S"
+    "preprocess/data/water_quality_data_interpolated.csv",
+    date_format="%Y-%m-%dT%H:%M:%S",
 )
+
+print("finished.")

@@ -4,6 +4,8 @@
 
 generate.py -> convert.py -> main.py
 
+preprocess/b_spline.py -> preprocess/kriging.py -> preprocess/convert.py -> main.py
+
 ## 代码运行环境 Requirements
 
 ### Windows

@@ -1,6 +1,7 @@
 .DS_Store
 convlstm
 __pycache__
+graphs/*.png
 mock/generate/*.png
 preprocess/graphs/*.png
 preprocess/kriging/*.png

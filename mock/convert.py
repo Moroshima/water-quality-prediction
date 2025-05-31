@@ -33,4 +33,5 @@ for frame_idx in range(20):
 
 print("shape:", tensor.shape)
 np.savez_compressed("water_quality_mock.npz", tensor)
+
 print("finished.")
