@@ -82,10 +82,11 @@ for i in range(5):
         plt.gcf().autofmt_xdate()
 
         # 保存图像
+        plt.tight_layout()
         plt.savefig(
             # f"preprocess/graphs/{point_name}_{value}_拉格朗日插值对比.png",  # LAGRANGE
             f"preprocess/graphs/{point_name}_{value}_三次B样条插值对比.png",
-            dpi=300,
+            dpi=600,
             bbox_inches="tight",
         )
         plt.close()

@@ -200,22 +200,28 @@ for index, feature in enumerate(features):
 
             # Plot the original frames.
             for idx, ax in enumerate(axes[0]):
-                ax.imshow(np.squeeze(example[idx]), cmap="gray")
+                ax.imshow(np.squeeze(example[idx]), cmap="gray", vmin=0, vmax=1)
                 ax.set_title(f"Input {idx + 1}")
                 ax.axis("off")
             for idx, ax in enumerate(axes[1]):
-                ax.imshow(np.squeeze(example[idx + 10]), cmap="gray")
+                ax.imshow(np.squeeze(example[idx + 10]), cmap="gray", vmin=0, vmax=1)
                 ax.set_title(f"GT {idx + 11}")
                 ax.axis("off")
 
             # Plot the new frames.
             new_frames = frames[10:, ...]
             for idx, ax in enumerate(axes[2]):
-                ax.imshow(np.squeeze(new_frames[idx]), cmap="gray")
+                ax.imshow(np.squeeze(new_frames[idx]), cmap="gray", vmin=0, vmax=1)
                 ax.set_title(f"Prediction {idx + 11}")
                 ax.axis("off")
 
             # Save the figure.
-            plt.savefig(f"graphs/water_quality_{index}_{feature}_prediction.png")
+            plt.tight_layout()
+            plt.savefig(
+                f"graphs/water_quality_{index}_{feature}_prediction.png",
+                dpi=600,
+                bbox_inches="tight",
+            )
+            plt.close()
 
             print("finished.")

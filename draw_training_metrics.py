@@ -45,7 +45,12 @@ for index, feature in enumerate(features):
     ax2.set_ylim(1e-5, 1e-2)  # 对数坐标范围
 
     plt.tight_layout()
-    plt.savefig(f"graphs/loss_{index}_{feature}.png")
+    plt.savefig(
+        f"graphs/loss_{index}_{feature}.png",
+        dpi=600,
+        bbox_inches="tight",
+    )
+    plt.close()
 
     # 创建新画布专门展示RMSE
     plt.figure(figsize=(12, 6))
@@ -77,6 +82,11 @@ for index, feature in enumerate(features):
     plt.legend(loc="best")
 
     plt.tight_layout()
-    plt.savefig(f"graphs/rmse_{index}_{feature}.png")
+    plt.savefig(
+        f"graphs/rmse_{index}_{feature}.png",
+        dpi=600,
+        bbox_inches="tight",
+    )
+    plt.close()
 
 print("finished.")
