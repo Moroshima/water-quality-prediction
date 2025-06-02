@@ -195,6 +195,7 @@ for index, feature in enumerate(features):
                 # Extend the set of prediction frames.
                 frames = np.concatenate((frames, predicted_frame), axis=0)
 
+            plt.rcParams["font.sans-serif"] = ["Noto Sans SC"]
             # Construct a figure for the original and new frames.
             fig, axes = plt.subplots(3, 10, figsize=(20, 6))
 
@@ -215,6 +216,15 @@ for index, feature in enumerate(features):
                 ax.set_title(f"Prediction {idx + 11}")
                 ax.axis("off")
 
+            plt.tight_layout(rect=[0, 0, 1, 0.96])  # 为标题留出顶部空间
+
+            # 添加大标题（使用suptitle而不是title）
+            plt.suptitle(
+                f"Water Quality Prediction for {feature}",
+                fontsize=16,
+                y=0.98,  # 控制标题位置
+            )
+
             # Save the figure.
             plt.tight_layout()
             plt.savefig(
@@ -224,4 +234,4 @@ for index, feature in enumerate(features):
             )
             plt.close()
 
-            print("finished.")
+    print("finished.")

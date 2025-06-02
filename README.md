@@ -2,9 +2,15 @@
 
 水质监测浮标
 
-generate.py -> convert.py -> main.py
+## 代码执行链路
 
-preprocess/b_spline.py -> preprocess/kriging.py -> preprocess/convert.py -> main.py
+### 使用模拟数据集验证模型可用性
+
+generate.py -> convert.py -> main.py (train -> evaluate -> predict)
+
+### 在实际数据集上进行训练和预测
+
+preprocess/b_spline.py -> preprocess/kriging.py -> preprocess/convert.py -> main.py (train -> evaluate -> predict) -> draw_training_metrics.py
 
 ## 代码运行环境 Requirements
 
@@ -35,13 +41,7 @@ pip install pillow numpy matplotlib keras scipy pandas
 pip install torch --index-url https://download.pytorch.org/whl/cu128
 ```
 
-or uncomment the following line in `requirements.txt`:
-
-```txt
---index-url https://download.pytorch.org/whl/cu128 torch==2.7.0+cu128
-```
-
-and then run
+or use requirements.txt to install all dependencies at once:
 
 ```pwsh
 pip install -r requirements.txt
@@ -67,16 +67,12 @@ source convlstm/bin/activate
 #### Install Dependencies
 
 ```zsh
-pip install pillow numpy matplotlib keras torch
+pip install pillow numpy matplotlib keras tensorflow scipy pandas
 ```
 
-or
+## Note
 
-```zsh
-pip install -r requirements.txt
-```
-
-#### Rebuild matplotlib Fonts Cache
+### Rebuild matplotlib Fonts Cache
 
 ```zsh
 rm -r ~/.matplotlib

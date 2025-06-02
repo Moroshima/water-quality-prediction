@@ -17,6 +17,7 @@ for index, feature in enumerate(features):
 
     # 创建画布
     plt.figure(figsize=(12, 6))
+    plt.rcParams["font.sans-serif"] = ["Noto Sans SC"]
     plt.xticks(epochs)
 
     # 绘制损失曲线（左轴）
@@ -41,7 +42,7 @@ for index, feature in enumerate(features):
     ax1.legend(lines, labels, loc="best")
 
     # 设置其他参数
-    plt.title("Loss & Learning Rate", fontsize=14, pad=20)
+    plt.title(f"{feature} Loss & Learning Rate", fontsize=14, pad=20)
     ax2.set_ylim(1e-5, 1e-2)  # 对数坐标范围
 
     plt.tight_layout()
@@ -75,7 +76,7 @@ for index, feature in enumerate(features):
     )
 
     # 设置图表元素
-    plt.title("Root Mean Squared Error", fontsize=14, pad=20)
+    plt.title(f"{feature} Root Mean Squared Error", fontsize=14, pad=20)
     plt.xlabel("Epoch", fontsize=12)
     plt.ylabel("RMSE", fontsize=12)
     plt.grid(True, linestyle="--", alpha=0.5)

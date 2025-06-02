@@ -1,8 +1,10 @@
 keras==3.10.0
 matplotlib==3.10.3
 numpy==2.2.6
+pandas==2.2.3
 pillow==11.2.1
-torch==2.7.0
-# if your environment is CUDA-capable, uncomment the following line and comment
-# the line above
-#--index-url https://download.pytorch.org/whl/cu128 torch==2.7.0+cu128
+scipy==1.15.3
+--index-url https://download.pytorch.org/whl/cu128 torch==2.7.0+cu128
+# use tensorflow instead of pytorch as a workaround for macOS due to pytorch
+# cannot work properly
+#tensorflow==2.19.0
