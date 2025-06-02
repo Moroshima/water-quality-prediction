@@ -50,7 +50,6 @@ pip install -r requirements.txt
 ### macOS
 
 - Python 3.12.10
-- Metal Performance Shaders (MPS) support
 
 #### Create Python Virtual Environment
 
