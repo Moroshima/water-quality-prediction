@@ -90,6 +90,8 @@ rm -r ~/.matplotlib
 
 ## 参考 References
 
+[[1506.04214] Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting](https://arxiv.org/abs/1506.04214)
+
 [Convlstm 时空预测（keras 框架、实战）\_convlstm3d 多步输出-CSDN 博客](https://blog.csdn.net/popofzk/article/details/106155925)
 
 [时空预测 1-convlstm 中的 ecnoder-forecast\_表格化数据做 convlstm-CSDN 博客](https://blog.csdn.net/weixin_38812492/article/details/125276794)
@@ -102,8 +104,20 @@ rm -r ~/.matplotlib
 
 [Get Started - pytorch.org](https://pytorch.org/get-started/locally/)
 
-### NOT IN USE
+[Trying Keras Core with PyTorch Backend | by Bagus Tris Atmaja | Medium](https://medium.com/@btatmaja/trying-keras-core-with-pytorch-backend-4a643275911f)
+
+[Save, serialize, and export models](https://keras.io/guides/serialization_and_saving/)
+
+[Training & evaluation with the built-in methods](https://keras.io/guides/training_with_built_in_methods/#api-overview-a-first-endtoend-example)
+
+[Regression metrics](https://keras.io/api/metrics/regression_metrics/)
+
+[【深度学习】第8.4节 ConvLSTM模型 - 知乎](https://zhuanlan.zhihu.com/p/675543830)
+
+### Not Referenced
 
 [keras-io/conv-lstm · Hugging Face](https://huggingface.co/keras-io/conv-lstm)
 
 [conv-LSTM 解读：背景&介绍&优劣势&适用场景（附生成视频 seq 预测问题的 keras 代码） - 知乎](https://zhuanlan.zhihu.com/p/124106729)
+
+[ConvLSTM簡介 — Convolutional LSTM Network — A Machine Learning Approach for Precipitation Nowcasting | by xiao sean | Medium](https://xiaosean5408.medium.com/convlstm%E7%B0%A1%E4%BB%8B-convolutional-lstm-network-a-machine-learning-approach-for-precipitation-nowcasting-84fa4541cb46)
